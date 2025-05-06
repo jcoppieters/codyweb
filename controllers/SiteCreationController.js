@@ -4,7 +4,7 @@
 //
 console.log("loading " + module.id);
 
-var mysql = require("mysql");
+var mysql = require("mysql2");
 var cody = require("cody/index.js");
 var ec = require("cody/controllers/EmailController");
 var path = require("path");
