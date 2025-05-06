@@ -17,6 +17,14 @@ var bodyParser = cody.bodyParser;
 var expressSession = cody.expressSession;
 var multer = cody.multer;
 
+// add i18n
+var i18n = cody.i18n;
+i18n.configure({
+    locales:['zh-cn', 'en'],
+    directory: __dirname + '/locales',
+    defaultLocale: 'en'
+});
+cody.server.use(i18n.init);
 
 // use the new 4.x middleware
 cody.server.use(bodyParser());
