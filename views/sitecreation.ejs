@@ -35,7 +35,7 @@
             <% }else if(message == "activation-success") { %>
                 <p>
                     Congratulations. Your website is now active!<br />
-                    It will soon be available at <a href="<%= params.url %>"><%= params.url %></a><br />
+                    It will soon be available at <a href="<%= params.getURL() %>"><%= params.getURL() %></a><br />
                     Do not forget to configure the DNS record for this hostname.<br />
                 </p>
 

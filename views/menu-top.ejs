@@ -11,7 +11,7 @@
     <% var children = app.getPage(page.language, 1).children %>
     <% for (var ip in children) { var p = children[ip];
          if (p.isVisible()) { %>
-           <a class="<%= (p == page.top) ? 'active' : '' %>" href="/<%=p.url%>"><%= p.title %></a>
+           <a class="<%= (p == page.top) ? 'active' : '' %>" href="/<%=p.getURL()%>"><%= p.title %></a>
     <%   } %>
     <% } %>
 	</nav>

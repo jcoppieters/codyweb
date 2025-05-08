@@ -39,7 +39,7 @@
         <%  } else if (SC.kind == 'I') { %>
           <img class="intro" src="<%- dynamic %>/images/<%=SC.atom.id%>.<%=SC.atom.extention%>">
         <% }} %>
-        <!-- a href="/<%=CP.url%>"><%= CP.title %></a -->
+        <!-- a href="/<%=CP.getURL()%>"><%= CP.title %></a -->
       </article>
       <% } %>
     </section>

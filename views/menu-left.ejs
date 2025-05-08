@@ -13,13 +13,13 @@
                       <% var subsub = page.parent.children[j]; %>
                        <% if (subsub.isVisible()) { %>
                         <li><a <%- (page == subsub) ? 'class="active"' : '' %>
-                               href="/<%=subsub.url%>"><%=subsub.title%></a></li>
+                               href="/<%=subsub.getURL()%>"><%=subsub.title%></a></li>
                        <% } %>
                    <% } %>
                  </ul></li>
                <% } else { %>
                   <li><a <%- (page == subpage) ? 'class="active"' : '' %>
-                         href="/<%=subpage.url%>"><%=subpage.title%></a></li>
+                         href="/<%=subpage.getURL()%>"><%=subpage.title%></a></li>
                <% } %>
            <% } %>
        <% } %>
