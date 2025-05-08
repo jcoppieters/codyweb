@@ -7,21 +7,21 @@
 <html class="no-js" lang="<%=page.language%>">
 <!--<![endif]-->
 
-<% include header.ejs %>
+<%- include("header.ejs") %>
 
 <body class="page" id="page<%= page.itemId %>">
 <script src="<%=cstatic%>/js/lib/jquery-1.9.1<%=min%>.js"></script>
 <script src="<%=cstatic%>/js/lib/jquery-ui-1.10.1<%=min%>.js"></script>
 <script src="<%=cstatic%>/js/lib/jquery.validate<%=min%>.js"></script>
 <script src="<%=cstatic%>/js/lib/localization/messages_<%=page.language%>.js"></script>
-<% include menu-top %>
+<%- include("menu-top %>
 
 <div id="banner"></div>
 
 <div id="content">
   <% var theChildren = []; %>
   <% if ((page.root.itemId == 1) && (page.parent.itemId != 1)) { %>
-    <% include menu-left %>
+    <%- include("menu-left %>
   <% } %>
 
     <section class="<%= (theChildren.length == 0) ? 'noNav' : 'withNav' %>">

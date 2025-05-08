@@ -7,10 +7,10 @@
 <html class="no-js" lang="<%=page.language%>">
 <!--<![endif]-->
 
-<% include header.ejs %>
+<%- include("header.ejs") %>
 
 <body class="home">
-  <% include menu-top %>
+  <%- include("menu-top %>
 
   <script>
     $(document).ready(function() {
@@ -79,7 +79,7 @@
     </section>
   </div>
 
-  <% include footer.ejs %>
+  <%- include("footer.ejs") %>
 
 </body>
 </html>

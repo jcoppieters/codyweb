@@ -7,17 +7,17 @@
 <html class="no-js" lang="<%=page.language%>">
 <!--<![endif]-->
 
-<% include header.ejs %>
+<%- include("header.ejs") %>
 
 <body class="page" id="page<%= page.itemId %>">
-<% include menu-top %>
+<%- include("menu-top %>
 
 <div id="banner"></div>
 
 <div id="content">
   <% var theChildren = []; %>
   <% if ((page.root.itemId == 1) && (page.parent.itemId != 1)) { %>
-    <% include menu-left %>
+    <%- include("menu-left %>
   <% } %>
 
   <section class="<%= (theChildren.length == 0) ? 'noNav' : 'withNav' %>">
@@ -35,7 +35,7 @@
   </section>
 </div>
 
-<% include footer.ejs %>
+<%- include("footer.ejs") %>
 
 </body>
 </html>
