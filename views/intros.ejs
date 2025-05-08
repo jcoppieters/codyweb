@@ -16,7 +16,7 @@
   <div id="banner"></div>
 
   <div id="content">
-    <% var theChildren = []; %>
+    <% var theChildren = (page.item.parentId == 1) ? page.children : page.parent.children; %>
     <% if (page.root.itemId == 1) { %>
       <%- include("menu-left %>
     <% } %>
