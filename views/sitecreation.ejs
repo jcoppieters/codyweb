@@ -14,7 +14,7 @@
 <script src="<%=cstatic%>/js/lib/jquery-ui-1.10.1<%=min%>.js"></script>
 <script src="<%=cstatic%>/js/lib/jquery.validate<%=min%>.js"></script>
 <script src="<%=cstatic%>/js/lib/localization/messages_<%=page.language%>.js"></script>
-<%- include("menu-top %>
+<%- include("menu-top.ejs") %>
 
 <div id="banner"></div>
 
@@ -22,7 +22,7 @@
   <% var theChildren = (page.item.parentId == 1) ? page.children : page.parent.children; %>
 
   <% if ((page.root.itemId == 1) && (page.parent.itemId != 1)) { %>
-    <%- include("menu-left %>
+    <%- include("menu-left.ejs") %>
   <% } %>
 
     <section class="<%= (theChildren.length == 0) ? 'noNav' : 'withNav' %>">

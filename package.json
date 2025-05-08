@@ -1,0 +1,16 @@
+{
+  "name": "bok",
+  "version": "4.0.0",
+  "description": "Cody website on top of Cody",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "cd ..; node codyweb/index.js"
+  },
+  "keywords": [],
+  "author": "Johan Coppieters",
+  "license": "ISC",
+  "dependencies": {
+    "cody": "^4.0.0",
+    "i18n": "^0.15.1"
+  }
+}

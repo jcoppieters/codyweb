@@ -1,0 +1,27 @@
+{
+  "name": "codyweb",
+  "prefix": "codyweb",
+  "mailFrom": "johan@coppieters.be",
+
+  "smtpoptions" : {
+      "host": "relay-auth.mailprotect.be",
+      "port": 25,
+      "secure": false,
+      "auth": { 
+        "user": "raaklijnbe", 
+        "pass":  "F13MnfbM" 
+      }
+  },
+
+  "smtp": "relay-auth.mailprotect.be",
+  "version": "V0.3",
+  "defaultlanguage": "nl",
+  "hostnames" : "codyweb.local,localhost",
+  "dbuser": "root",
+  "dbpassword": "Jd2qqNAt",
+  "dbhost": "localhost",
+  "datapath": "/usr/local/data/codyweb",
+  "db": "codyweb",
+
+  "port": 3000
+}

@@ -1,16 +1,13 @@
+/**
+ * Created by johan on 25/03/15.
+ */
 //
 // Johan Coppieters - jan 2013 - Cody CMS
-//
-// website for Cody CMS
-//
 //
 
 var cody = require('cody');
 var express = cody.express;
-var fs = cody.fs;
-var mysql = cody.mysql;
-
-var ejs = cody.ejs;
+var path = require("path");
 
 cody.server = express();
 var bodyParser = cody.bodyParser;
@@ -33,30 +30,21 @@ cody.server.use(bodyParser.urlencoded({ extended: true }));
 cody.server.use(multer().any());
 
 
-// startup a routing for all static content of cody (images, javascript, css)
-cody.server.get("/cody/static/*", function (req, res) {
-    var fileserver = new cody.Static(req, res, "");
-    fileserver.serve();
-});
+// startup a routing for all static content of cody (images, javascript, css) if local
+if (__dirname.indexOf("Development") != -1) {
+  console.log("Starting static cody file server for local development");
+  cody.server.get("/cody/static/*", function (req, res) {
+      var fileserver = new cody.Static(req, res, "", "");
+      fileserver.serve();
+  });
+}
 
-
-cody.startWebApp(cody.server, {
-    "name": "codyweb",
-    "mailFrom": "info@cody-cms.org",
-    "smtp": "smtpmailer.howest.be",
-    "version": "V0.1",
-    "defaultlanguage": "en",
-    "hostnames" : "localhost,cody.local,vpn.cody-cms.org,howest.cody-cms.org,www.cody-cms.org,cody-cms.org",
-    "dbuser": "cody",
-    "dbpassword": "ydoc",
-    "dbhost": "localhost",
-    "datapath": "/usr/local/data/codyweb",
-    "db": "codyweb",
-    "controllers": require("./controllers/")
-  },
+cody.config = require(path.join(__dirname, "config.json"));
+cody.config.controllers = require(path.join(__dirname, "controllers/"));
+cody.startWebApp(cody.server, cody.config,
   function() {
-    console.log("Loaded Cody Website....");
-    var portNr = 3000;
+    console.log("Loaded " + cody.config.name + " web app....");
+    var portNr = cody.config.port;
     cody.server.listen(portNr);
     console.log('Listening on port ' + portNr);
   }
