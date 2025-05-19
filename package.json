@@ -1,10 +1,10 @@
 {
-  "name": "codyweb",
+  "name": "cody-cms",
   "version": "4.0.0",
   "description": "Cody website on top of Cody",
   "main": "dist/index.js",
   "scripts": {
-    "start": "cd ..; node codyweb/index.js"
+    "start": "cd ..; node cody-cms/index.js"
   },
   "keywords": [],
   "author": "Johan Coppieters",

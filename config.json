@@ -1,6 +1,6 @@
 {
-  "name": "codyweb",
-  "prefix": "codyweb",
+  "name": "cody-cms",
+  "prefix": "cody-cms",
   "mailFrom": "johan@coppieters.be",
 
   "smtpoptions" : {
@@ -16,12 +16,12 @@
   "smtp": "relay-auth.mailprotect.be",
   "version": "V0.3",
   "defaultlanguage": "nl",
-  "hostnames" : "codyweb.local,localhost",
+  "hostnames" : "cody-cms.local",
   "dbuser": "root",
   "dbpassword": "Jd2qqNAt",
   "dbhost": "localhost",
-  "datapath": "/usr/local/data/codyweb",
-  "db": "codyweb",
+  "datapath": "/usr/local/data/cody-cms",
+  "db": "codycms",
 
   "port": 3000
 }
