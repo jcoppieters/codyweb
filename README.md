@@ -1,1 +1,6 @@
 # cody-cms
+
+## db: mysql8 / npm: mysql2
+dont't forget: ```CREATE FUNCTION PASSWORD2(s VARCHAR(50))
+RETURNS VARCHAR(50) DETERMINISTIC
+RETURN CONCAT('*', UPPER(SHA1(UNHEX(SHA1(s))))); ```
